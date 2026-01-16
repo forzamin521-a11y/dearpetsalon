@@ -1,0 +1,24 @@
+
+> dear-pet-salon@0.1.0 build
+> next build
+
+??Next.js 16.1.2 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/page.tsx:205:31
+Parsing ecmascript source code failed
+  203 |                <motion.div 
+  204 |                   key={i} 
+> 205 |                   className={`group relative overflow - hidden rounded - 3xl ${ item.color } ${ item.span || '' } shadow - md hover: shadow - xl transition - all duration - 300 cursor -default `}
+      |                               ^^^^^
+  206 |                   whileHover={{ y: -5 }}
+  207 |                >
+  208 |                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/10" />
+
+Expected ';', '}' or <eof>
+
+
+    at <unknown> (./app/page.tsx:205:31)
