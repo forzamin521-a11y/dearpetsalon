@@ -1,0 +1,12 @@
+
+> dear-pet-salon@0.1.0 lint
+> eslint
+
+
+C:\Users\pkmlo\OneDrive\Desktop\AI愿?⑥옄猷?DearpetSalon\app\page.tsx
+    3:17  warning  'Suspense' is defined but never used                             @typescript-eslint/no-unused-vars
+  152:83  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  152:88  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+??3 problems (2 errors, 1 warning)
+

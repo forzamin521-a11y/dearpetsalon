@@ -44,7 +44,7 @@ export default function LandingPage() {
             {/* Background Layer */}
             <div className="absolute inset-0 z-0">
                <Image
-                  src="/images/fur-bg.png"
+                  src="/dearpetsalon/images/fur-bg.png"
                   alt="Fur Texture"
                   fill
                   className="object-cover opacity-60 mix-blend-multiply"
@@ -97,7 +97,7 @@ export default function LandingPage() {
                   {/* Hero Image */}
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[380px] md:w-[480px] aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/50 rotate-3 transition-transform hover:rotate-0 duration-700">
                      <Image
-                        src="/images/hero-dog-new.jpg"
+                        src="/dearpetsalon/images/hero-dog-new.jpg"
                         alt="비숑 프리제 가위컷"
                         fill
                         className="object-cover"
@@ -149,7 +149,7 @@ export default function LandingPage() {
                      </CardHeader>
                      <CardContent>
                         <p className="text-muted-foreground leading-relaxed break-keep">
-                           아이마다 다른 두상, 골격, 모량을 정밀 분석합니다. 단점을 자연스럽게 커버하고 장점은 극대화하는 '성형 컷'을 경험해보세요.
+                           아이마다 다른 두상, 골격, 모량을 정밀 분석합니다. 단점을 자연스럽게 커버하고 장점은 극대화하는 &apos;성형 컷&apos;을 경험해보세요.
                         </p>
                      </CardContent>
                   </Card>
@@ -183,10 +183,10 @@ export default function LandingPage() {
 
                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[300px] md:auto-rows-[400px]">
                   {[
-                     "/images/style-1.png",
-                     "/images/style-2.png",
-                     "/images/style-3.png",
-                     "/images/style-4.png",
+                     "/dearpetsalon/images/style-1.png",
+                     "/dearpetsalon/images/style-2.png",
+                     "/dearpetsalon/images/style-3.png",
+                     "/dearpetsalon/images/style-4.png",
                   ].map((img, i) => (
                      <motion.div
                         key={i}
@@ -227,19 +227,19 @@ export default function LandingPage() {
                         name: "망고 맘",
                         text: "맨날 집에서 미용했었는데, 역시 전문가는 달라요!!!! 사장님도 넘 친절하시고, 원하는대로 너무 예쁘게 잘잘라주셔서 만족합니다!!! 앞으로 여기 정착하려구요! 강추합니다!",
                         rating: 5,
-                        img: "/images/review-3.png"
+                        img: "/dearpetsalon/images/review-3.png"
                      },
                      {
                         name: "두부 맘",
                         text: "올때마다 항상 만족스럽습니다ㅠㅠ💜 서울에서 여기까지 오는게 하나도 아쉬울게없을정도로 너무너무 좋아요. 견주로써 내눈에만 이쁜 내아가들인데, 저도 저희 애들말고는 다른 강아지는 그렇게 이뻐하지도 않거든요. 그런데 애들을 너무너무 이뻐해주고... 항상 감사하게생각해요 또올게요👍💜💜",
                         rating: 5,
-                        img: "/images/review-2.png"
+                        img: "/dearpetsalon/images/review-2.png"
                      },
                      {
                         name: "구름이 맘",
                         text: "방문 할 때마다 기분 좋아져요 사장님이 가위컷을 정말 잘 하시고 반려견을 더욱 사랑스럽고 이쁘게 만들어 주세요 곰돌이컷 / 알머리컷 / 다리 스포팅 으로 진행했었는데 미용 맡길 때 마다 너무 만족하고 사장님 실력에 감탄해요😊💛👍🏻",
                         rating: 5,
-                        img: "/images/review-1.png"
+                        img: "/dearpetsalon/images/review-1.png"
                      }
                   ].map((review, i) => (
                      <Card key={i} className="border-none shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-gray-50/50 hover:bg-white flex flex-col">
@@ -271,7 +271,7 @@ export default function LandingPage() {
                         </CardHeader>
                         <CardContent className="flex-grow">
                            <p className="text-muted-foreground text-sm leading-relaxed break-keep line-clamp-4">
-                              "{review.text}"
+                              &quot;{review.text}&quot;
                            </p>
                         </CardContent>
                      </Card>
@@ -298,8 +298,8 @@ export default function LandingPage() {
             <div className="container px-6 mx-auto relative z-10 text-center">
                <Scissors className="w-12 h-12 mx-auto mb-8 text-mute-rose opacity-90" />
                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 leading-tight break-keep">
-                  "속도가 아닌,<br className="hidden md:block" />
-                  <span className="text-mute-rose">완성도에 집중합니다."</span>
+                  &quot;속도가 아닌,<br className="hidden md:block" />
+                  <span className="text-mute-rose">완성도에 집중합니다.&quot;</span>
                </h2>
                <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light leading-relaxed break-keep">
                   우리는 공장형 미용을 지양합니다.<br />
