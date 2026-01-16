@@ -4,7 +4,7 @@ import React, { Suspense, useState } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 // import Spline from '@splinetool/react-spline' 
-import { Phone, Check, Scissors, Heart, Calendar, Star, MapPin, X, Instagram } from 'lucide-react'
+import { Phone, Check, Scissors, Heart, Calendar, Star, MapPin, X, Instagram, MessageCircle } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import {
@@ -77,17 +77,31 @@ export default function LandingPage() {
                      섬세한 디테일로 아이의 숨겨진 아름다움을 찾아드려요.
                   </p>
 
-                  <motion.div
-                     whileHover={{ scale: 1.05 }}
-                     whileTap={{ scale: 0.95 }}
-                     className="inline-block pt-4"
-                  >
-                     <Button size="lg" className="rounded-full px-10 py-7 text-lg font-bold shadow-xl hover:shadow-2xl transition-all" asChild>
-                        <a href="tel:01095002938">
-                           상담 및 예약 문의하기
-                        </a>
-                     </Button>
-                  </motion.div>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                     <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-block"
+                     >
+                        <Button size="lg" className="rounded-full px-8 py-7 text-lg font-bold shadow-xl hover:shadow-2xl transition-all" asChild>
+                           <a href="tel:01095002938">
+                              전화 예약
+                           </a>
+                        </Button>
+                     </motion.div>
+
+                     <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-block"
+                     >
+                        <Button size="lg" variant="outline" className="rounded-full px-8 py-7 text-lg font-bold shadow-xl hover:shadow-2xl border-2 border-[#FEE500] hover:bg-[#FEE500] hover:text-[#3C1E1E] transition-all bg-white" asChild>
+                           <a href="http://pf.kakao.com/_HxofVK" target="_blank" rel="noopener noreferrer">
+                              카톡 문의
+                           </a>
+                        </Button>
+                     </motion.div>
+                  </div>
                </motion.div>
 
                <motion.div
@@ -333,7 +347,7 @@ export default function LandingPage() {
          </section>
 
          <footer id="contact" className="bg-[#222] text-white/30 py-12 text-center text-sm">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center gap-4 mb-6">
                <a
                   href="http://instagram.com/dear.petsalon"
                   target="_blank"
@@ -343,22 +357,38 @@ export default function LandingPage() {
                >
                   <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
                </a>
+               <a
+                  href="http://pf.kakao.com/_HxofVK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-[#FEE500]/10 text-[#FEE500] rounded-full hover:bg-[#FEE500]/20 transition-all group"
+                  aria-label="KakaoTalk"
+               >
+                  <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+               </a>
             </div>
             <p className="mb-2">수원시 권선구 동수원로146번길 73 태선빌딩 1층 디어펫 살롱</p>
             <p>&copy; 2026 Dearpet Salon. All rights reserved.</p>
          </footer>
 
          {/* --- STICKY CTA --- */}
-         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs md:max-w-sm">
+         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-sm px-4">
             <motion.div
                initial={{ y: 100, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ delay: 1, type: "spring", stiffness: 200 }}
+               className="grid grid-cols-2 gap-3"
             >
-               <Button size="lg" className="w-full rounded-full bg-mute-rose text-dark-charcoal hover:bg-white hover:text-black transition-all h-14 text-lg shadow-2xl border border-white/20" asChild>
-                  <a href="tel:01095002938" className="flex items-center justify-center gap-3">
+               <Button size="lg" className="rounded-full bg-mute-rose text-dark-charcoal hover:bg-white hover:text-black transition-all h-14 text-base shadow-2xl border border-white/20" asChild>
+                  <a href="tel:01095002938" className="flex items-center justify-center gap-2">
                      <Phone className="w-5 h-5 fill-current" />
-                     <span className="font-bold tracking-wide">전화 상담 연결</span>
+                     <span className="font-bold">전화 상담</span>
+                  </a>
+               </Button>
+               <Button size="lg" className="rounded-full bg-[#FEE500] text-[#3C1E1E] hover:bg-white hover:text-black transition-all h-14 text-base shadow-2xl border border-[#FEE500]" asChild>
+                  <a href="http://pf.kakao.com/_HxofVK" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                     <MessageCircle className="w-5 h-5 fill-current" />
+                     <span className="font-bold">카톡 문의</span>
                   </a>
                </Button>
             </motion.div>
